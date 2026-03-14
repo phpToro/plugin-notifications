@@ -1,7 +1,7 @@
-import Foundation
+import UIKit
 import UserNotifications
 
-final class NotificationsHandler: NativeHandler {
+final class NotificationsHandler: AsyncHandler {
     let namespace = "notifications"
 
     var onAsyncCallback: ((String, Any?) -> Void)?
@@ -26,6 +26,7 @@ final class NotificationsHandler: NativeHandler {
                 case .authorized: status = "granted"
                 case .denied: status = "denied"
                 case .provisional: status = "provisional"
+                case .ephemeral: status = "ephemeral"
                 case .notDetermined: status = "notDetermined"
                 @unknown default: status = "unknown"
                 }
