@@ -11,6 +11,10 @@
                     "description": "This app needs permission to send notifications"
                 }
             ]
+        },
+        "macos": {
+            "handlers": ["macos/NotificationsHandler.swift"],
+            "frameworks": ["UserNotifications"]
         }
     },
     "js": ["js/notifications.js"],
