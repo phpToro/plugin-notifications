@@ -1,0 +1,20 @@
+{
+    "name": "Notifications",
+    "namespace": "notifications",
+    "platforms": {
+        "ios": {
+            "handlers": ["ios/NotificationsHandler.swift"],
+            "frameworks": ["UserNotifications"],
+            "permissions": [
+                {
+                    "key": "NSUserNotificationsUsageDescription",
+                    "description": "This app needs permission to send notifications"
+                }
+            ]
+        }
+    },
+    "js": ["js/notifications.js"],
+    "php": {
+        "files": ["php/Notifications.php"]
+    }
+}
